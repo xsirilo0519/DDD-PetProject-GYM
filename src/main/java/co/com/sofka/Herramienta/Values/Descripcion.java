@@ -1,15 +1,14 @@
-package co.com.sofka.Personal.Values;
+package co.com.sofka.Herramienta.Values;
 
-import co.com.sofka.Entrenamiento.Values.Duracion;
+import co.com.sofka.Personal.Values.Telefono;
 import co.com.sofka.domain.generic.ValueObject;
 
-import java.sql.Time;
 import java.util.Objects;
 
-public class Horario implements ValueObject<String> {
+public class Descripcion implements ValueObject<String> {
     private final String value;
 
-    public Horario(String value) {
+    public Descripcion(String value) {
         this.value = Objects.requireNonNull(value);
     }
     public String value() {
@@ -20,7 +19,7 @@ public class Horario implements ValueObject<String> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Horario that = (Horario) o;
+        Descripcion that = (Descripcion) o;
         return Objects.equals(value, that.value);
     }
     @Override

@@ -1,18 +1,17 @@
-package co.com.sofka.Personal.Values;
+package co.com.sofka.Herramienta.Values;
 
-import co.com.sofka.Entrenamiento.Values.Duracion;
+import co.com.sofka.Personal.Values.Telefono;
 import co.com.sofka.domain.generic.ValueObject;
 
-import java.sql.Time;
 import java.util.Objects;
 
-public class Horario implements ValueObject<String> {
-    private final String value;
+public class Estado implements ValueObject<Boolean> {
+    private final Boolean value;
 
-    public Horario(String value) {
+    public Estado(Boolean value) {
         this.value = Objects.requireNonNull(value);
     }
-    public String value() {
+    public Boolean value() {
         return value;
     }
 
@@ -20,7 +19,7 @@ public class Horario implements ValueObject<String> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Horario that = (Horario) o;
+        Estado that = (Estado) o;
         return Objects.equals(value, that.value);
     }
     @Override

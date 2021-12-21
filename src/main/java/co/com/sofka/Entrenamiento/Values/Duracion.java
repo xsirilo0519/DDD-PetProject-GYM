@@ -27,4 +27,5 @@ public class Duracion implements ValueObject<Time> {
         return Objects.hash(value);
     }
 
+
 }
